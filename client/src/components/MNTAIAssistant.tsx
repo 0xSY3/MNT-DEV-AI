@@ -23,7 +23,7 @@ export default function MNTAIAssistant() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: 'Hello! I\'m MNT AI, your Mantle ecosystem assistant. How can I help you today? You can ask me about:\n- Mantle Network features\n- Layer 2 scaling solutions\n- Smart contract development\n- Network statistics and performance'
+      content: 'Hello! I\'m Mantle AI, your Mantle ecosystem assistant. How can I help you today? You can ask me about:\n- Mantle Network features\n- Layer 2 scaling solutions\n- Smart contract development\n- Network statistics and performance'
     }
   ]);
   const [input, setInput] = useState('');
@@ -101,7 +101,7 @@ export default function MNTAIAssistant() {
             <Brain className="h-5 w-5 text-purple-400" />
           </div>
           <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-            MNT AI Assistant
+            Mantle AI Assistant
           </span>
         </CardTitle>
       </CardHeader>

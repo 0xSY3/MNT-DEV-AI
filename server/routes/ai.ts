@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 
 const router = Router();
 
-const SYSTEM_MESSAGE = `You are MNT AI, an AI assistant specialized in the Mantle Network ecosystem. You help users understand:
+const SYSTEM_MESSAGE = `You are Mantle AI, an AI assistant specialized in the Mantle Network ecosystem. You help users understand:
 
 1. Mantle Network's Layer 2 scaling solution
 2. Smart contract development on Mantle

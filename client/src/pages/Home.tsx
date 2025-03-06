@@ -119,7 +119,7 @@ export default function Home() {
     {
       href: "/assistant",
       icon: Brain,
-      title: "MNT AI Agent",
+      title: "Mantle AI Agent",
       description: "Get instant help with Mantle development",
       buttonText: "Chat Now"
     }

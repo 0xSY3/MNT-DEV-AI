@@ -1,4 +1,4 @@
-# MNT DEV AI -  A Mantle Network Development Platform
+# AgenticMinds -  A Mantle Network Development Platform
 
 An AI-powered development platform for building, analyzing, and optimizing smart contracts on the Mantle Network Layer 2 solution.
 
@@ -22,7 +22,7 @@ An AI-powered development platform for building, analyzing, and optimizing smart
 - Common patterns and implementations
 - Customizable contract templates
 
-### 🤖 MNT AI Assistant
+### 🤖 Mantle AI Assistant
 - AI-powered development assistance
 - Real-time code suggestions
 - Smart contract optimization tips
