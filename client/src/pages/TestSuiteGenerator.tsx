@@ -89,11 +89,11 @@ export default function TestSuiteGenerator() {
       case "unit":
         return "bg-blue-500/10 text-blue-500";
       case "integration":
-        return "bg-green-500/10 text-green-500";
+        return "bg-purple-500/10 text-purple-500";
       case "security":
         return "bg-red-500/10 text-red-500";
       case "gas":
-        return "bg-green-500/10 text-green-500";
+        return "bg-purple-500/10 text-purple-500";
       default:
         return "bg-gray-500/10 text-gray-500";
     }
@@ -111,8 +111,8 @@ export default function TestSuiteGenerator() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center">
               <div className="inline-block px-4 py-1.5 mb-4 rounded-full text-sm font-medium 
-                bg-green-500/10 border border-green-500/20 animate-in fade-in slide-in-from-bottom-3">
-                <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                bg-purple-500/10 border border-purple-500/20 animate-in fade-in slide-in-from-bottom-3">
+                <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                   AI-Powered Testing 🧪
                 </span>
               </div>
@@ -121,7 +121,7 @@ export default function TestSuiteGenerator() {
                 <h1 className="text-5xl sm:text-6xl font-black tracking-tight leading-tight">
                   Test Suite
                   <br />
-                  <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                     Generator
                   </span>
                 </h1>
@@ -132,11 +132,11 @@ export default function TestSuiteGenerator() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+              <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
                 <CardHeader className="space-y-2">
                   <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 rounded-full bg-green-500/10 flex items-center justify-center">
-                      <Code2 className="h-4 w-4 text-green-400" />
+                    <div className="h-8 w-8 rounded-full bg-purple-500/10 flex items-center justify-center">
+                      <Code2 className="h-4 w-4 text-purple-400" />
                     </div>
                     <CardTitle className="text-white">Contract Input</CardTitle>
                   </div>
@@ -149,12 +149,12 @@ export default function TestSuiteGenerator() {
                     placeholder="Paste your smart contract code here..."
                     value={contractCode}
                     onChange={(e) => setContractCode(e.target.value)}
-                    className="font-mono min-h-[400px] bg-green-500/10 border-green-500/20 text-white placeholder:text-white/40"
+                    className="font-mono min-h-[400px] bg-purple-500/10 border-purple-500/20 text-white placeholder:text-white/40"
                   />
                   <Button
                     onClick={generateTests}
                     disabled={isLoading || !contractCode}
-                    className="w-full bg-green-600/90 text-white hover:bg-green-500 border border-green-500/30 shadow-lg shadow-green-500/20"
+                    className="w-full bg-purple-600/90 text-white hover:bg-purple-500 border border-purple-500/30 shadow-lg shadow-purple-500/20"
                   >
                     {isLoading ? (
                       <>
@@ -171,7 +171,7 @@ export default function TestSuiteGenerator() {
                 </CardContent>
               </Card>
 
-              <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+              <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-white">Generated Tests</CardTitle>
                   <CardDescription className="text-white/60">
@@ -186,7 +186,7 @@ export default function TestSuiteGenerator() {
                       </div>
                     ) : (
                       tests.map((test, index) => (
-                        <Card key={index} className="border-green-500/20 bg-green-900/10 backdrop-blur-sm transition-all hover:border-green-500/40 animate-in fade-in-50 slide-in-from-bottom-5 duration-500" style={{ animationDelay: `${index * 100}ms` }}>
+                        <Card key={index} className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm transition-all hover:border-purple-500/40 animate-in fade-in-50 slide-in-from-bottom-5 duration-500" style={{ animationDelay: `${index * 100}ms` }}>
                           <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
                               <div className="space-y-1">
@@ -203,7 +203,7 @@ export default function TestSuiteGenerator() {
                               <CodeViewer code={test.code} className="max-h-[300px]" />
                               {test.coverage && (
                                 <div className="flex items-center space-x-4 text-sm">
-                                  <div className="flex items-center text-green-500">
+                                  <div className="flex items-center text-purple-500">
                                     <CheckCircle className="mr-1 h-4 w-4" />
                                     {test.coverage.functions.length} Functions Covered
                                   </div>
@@ -213,7 +213,7 @@ export default function TestSuiteGenerator() {
                                   </div>
                                 </div>
                               )}
-                              <div className="text-sm bg-green-500/10 p-3 rounded-md border border-green-500/20">
+                              <div className="text-sm bg-purple-500/10 p-3 rounded-md border border-purple-500/20">
                                 <strong className="text-white">Expected Result:</strong>{" "}
                                 <span className="text-white/80">{test.expected.result}</span>
                                 {test.expected.gasEstimate && (

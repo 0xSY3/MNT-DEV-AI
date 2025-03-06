@@ -20,13 +20,13 @@ interface FeatureCardProps {
 // Card Components
 const FeatureCard = ({ href, icon: Icon, title, description, buttonText }: FeatureCardProps) => (
   <Link href={href}>
-    <Card className="h-full w-full bg-green-900/10 border border-green-500/20
+    <Card className="h-full w-full bg-purple-900/10 border border-purple-500/20
       hover:-translate-y-1 transition-all duration-300 group">
       <CardHeader className="space-y-2 p-8 sm:p-10">
         <CardTitle className="flex items-center space-x-3 text-xl">
-          <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-r from-green-400/20 to-green-600/20
-            transition-all duration-300 group-hover:from-green-400/30 group-hover:to-green-600/30">
-            <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-green-400" />
+          <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-r from-purple-400/20 to-purple-600/20
+            transition-all duration-300 group-hover:from-purple-400/30 group-hover:to-purple-600/30">
+            <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-purple-400" />
           </div>
           <span className="font-semibold text-lg sm:text-xl text-white/90">
             {title}
@@ -37,8 +37,8 @@ const FeatureCard = ({ href, icon: Icon, title, description, buttonText }: Featu
         </CardDescription>
       </CardHeader>
       <CardContent className="p-8 sm:p-10 pt-0 sm:pt-0">
-        <Button className="w-full bg-green-600/90 text-white hover:bg-green-500 border border-green-500/30
-              shadow-lg shadow-green-500/20 transition-all duration-300 group-hover:scale-[1.02]">
+        <Button className="w-full bg-purple-600/90 text-white hover:bg-purple-500 border border-purple-500/30
+              shadow-lg shadow-purple-500/20 transition-all duration-300 group-hover:scale-[1.02]">
           <span className="mr-2">{buttonText}</span>
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Button>
@@ -54,12 +54,12 @@ interface StatCardProps {
 }
 
 const StatCard = ({ value, label, icon: Icon }: StatCardProps) => (
-  <div className="px-4 py-5 sm:p-6 rounded-2xl bg-green-900/10 border border-green-500/20 backdrop-blur-sm 
+  <div className="px-4 py-5 sm:p-6 rounded-2xl bg-purple-900/10 border border-purple-500/20 backdrop-blur-sm 
     hover:scale-105 transition-all duration-300">
     <div className="flex flex-col items-center text-center">
       <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
-        <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-green-400 to-green-600
+        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
+        <span className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-400 to-purple-600
           bg-clip-text text-transparent">
           {value}
         </span>
@@ -106,7 +106,7 @@ export default function Home() {
       href: "/explorer",
       icon: BarChart2,
       title: "Contract Explorer",
-      description: "Chat with and analyze deployed contracts using AI",
+      description: "Chat with and analyze deployed contracts",
       buttonText: "Explore Contracts"
     },
     {
@@ -135,7 +135,7 @@ export default function Home() {
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-20 pb-16">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-green-500/20 blur-3xl rounded-full"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/20 blur-3xl rounded-full"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -143,13 +143,13 @@ export default function Home() {
               {/* Left Column - Text Content */}
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="h-1 w-12 bg-green-500"></div>
-                  <span className="text-green-400 font-medium tracking-wide">POWERED BY AI AGENTS</span>
+                  <div className="h-1 w-12 bg-purple-500"></div>
+                  <span className="text-purple-400 font-medium tracking-wide">POWERED BY AI AGENTS</span>
                 </div>
                 
                 <h1 className="text-5xl sm:text-6xl font-black mb-6 leading-tight">
                   <span className="text-white">Intelligent </span>
-                  <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                     Smart Contract
                   </span>
                   <span className="text-white"> Solutions</span>
@@ -161,12 +161,12 @@ export default function Home() {
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <Button className="bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-lg
+                  <Button className="bg-purple-500 hover:bg-purple-400 text-black font-bold px-8 py-4 rounded-lg
                     transition-all duration-300 flex items-center">
                     <span>Deploy Now</span>
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button className="bg-black border border-green-500/50 text-green-400 hover:bg-green-950 
+                  <Button className="bg-black border border-purple-500/50 text-purple-400 hover:bg-purple-950 
                     font-medium px-8 py-4 rounded-lg transition-all duration-300">
                     <span>Explore Features</span>
                   </Button>
@@ -174,17 +174,17 @@ export default function Home() {
                 
                 <div className="flex items-center gap-8">
                   <div className="flex flex-col">
-                    <span className="text-3xl font-bold text-green-400">10K+</span>
+                    <span className="text-3xl font-bold text-purple-400">10K+</span>
                     <span className="text-gray-400 text-sm">Contracts Created</span>
                   </div>
-                  <div className="h-8 w-px bg-green-500/30"></div>
+                  <div className="h-8 w-px bg-purple-500/30"></div>
                   <div className="flex flex-col">
-                    <span className="text-3xl font-bold text-green-400">99.8%</span>
+                    <span className="text-3xl font-bold text-purple-400">99.8%</span>
                     <span className="text-gray-400 text-sm">Security Rating</span>
                   </div>
-                  <div className="h-8 w-px bg-green-500/30"></div>
+                  <div className="h-8 w-px bg-purple-500/30"></div>
                   <div className="flex flex-col">
-                    <span className="text-3xl font-bold text-green-400">24/7</span>
+                    <span className="text-3xl font-bold text-purple-400">24/7</span>
                     <span className="text-gray-400 text-sm">AI Support</span>
                   </div>
                 </div>
@@ -195,26 +195,26 @@ export default function Home() {
                 <div className="relative w-full max-w-xl aspect-square">
                   {/* Decorative elements */}
                   <div className="absolute top-0 left-0 w-full h-full">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] border-2 border-green-500/30 rounded-full animate-pulse"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] border border-green-500/20 rounded-full"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] h-[55%] border-2 border-green-500/40 rounded-full animate-pulse" style={{animationDelay: "1s"}}></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[40%] border-2 border-green-500/30 rounded-full animate-pulse" style={{animationDelay: "2s"}}></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] border-2 border-purple-500/30 rounded-full animate-pulse"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] border border-purple-500/20 rounded-full"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] h-[55%] border-2 border-purple-500/40 rounded-full animate-pulse" style={{animationDelay: "1s"}}></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[40%] border-2 border-purple-500/30 rounded-full animate-pulse" style={{animationDelay: "2s"}}></div>
                   </div>
                   
                   {/* Improved Logo - No solid background, gradient fill, better glow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[30%] flex items-center justify-center">
                     {/* Subtle radial gradient instead of solid background */}
-                    <div className="absolute w-full h-full rounded-full bg-gradient-to-r from-green-500/10 to-transparent blur-xl"></div>
+                    <div className="absolute w-full h-full rounded-full bg-gradient-to-r from-purple-500/10 to-transparent blur-xl"></div>
                     
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256" className="w-3/4 h-3/4 relative z-10">
                       <defs>
                         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#4ade80" />
-                          <stop offset="100%" stopColor="#16a34a" />
+                          <stop offset="0%" stopColor="#a855f7" />
+                          <stop offset="100%" stopColor="#9333ea" />
                         </linearGradient>
                         <filter id="improved-glow">
                           <feGaussianBlur stdDeviation="3" result="blur" />
-                          <feFlood floodColor="#4ade80" floodOpacity="0.6" result="color" />
+                          <feFlood floodColor="#a855f7" floodOpacity="0.6" result="color" />
                           <feComposite in="color" in2="blur" operator="in" result="glow" />
                           <feMerge>
                             <feMergeNode in="glow" />
@@ -230,8 +230,8 @@ export default function Home() {
                     </svg>
                     
                     {/* Subtle pulse animations for added depth */}
-                    <div className="absolute w-3/4 h-3/4 rounded-full border border-green-400/20 animate-pulse"></div>
-                    <div className="absolute w-full h-full rounded-full border border-green-400/10 animate-pulse" style={{animationDelay: "0.5s"}}></div>
+                    <div className="absolute w-3/4 h-3/4 rounded-full border border-purple-400/20 animate-pulse"></div>
+                    <div className="absolute w-full h-full rounded-full border border-purple-400/10 animate-pulse" style={{animationDelay: "0.5s"}}></div>
                   </div>
                 </div>
               </div>
@@ -243,7 +243,7 @@ export default function Home() {
         </section>
 
         {/* Features Grid */}
-        <section id="features" className="py-12 sm:py-20 border-y border-green-500/10">
+        <section id="features" className="py-12 sm:py-20 border-y border-purple-500/10">
           <div className="mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-start">
               {features.map((feature, index) => (

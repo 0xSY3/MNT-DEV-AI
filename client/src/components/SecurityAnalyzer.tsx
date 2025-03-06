@@ -125,7 +125,7 @@ const SecurityAnalyzer: React.FC<SecurityAnalyzerProps> = ({ code }) => {
       case 'medium':
         return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
       case 'low':
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
+        return <CheckCircle className="h-5 w-5 text-purple-500" />;
       default:
         return <ShieldCheck className="h-5 w-5 text-white" />;
     }
@@ -138,9 +138,9 @@ const SecurityAnalyzer: React.FC<SecurityAnalyzerProps> = ({ code }) => {
       case 'medium':
         return 'text-yellow-500 border-yellow-500/30 bg-yellow-500/10';
       case 'low':
-        return 'text-green-500 border-green-500/30 bg-green-500/10';
+        return 'text-purple-500 border-purple-500/30 bg-purple-500/10';
       default:
-        return 'text-white border-green-500/30 bg-green-500/10';
+        return 'text-white border-purple-500/30 bg-purple-500/10';
     }
   };
 
@@ -159,8 +159,8 @@ const SecurityAnalyzer: React.FC<SecurityAnalyzerProps> = ({ code }) => {
       <Button
         onClick={analyzeContract}
         disabled={isAnalyzing || !code}
-        className="w-full bg-green-600/90 text-white hover:bg-green-500 
-          border border-green-500/30 shadow-lg shadow-green-500/20 
+        className="w-full bg-purple-600/90 text-white hover:bg-purple-500 
+          border border-purple-500/30 shadow-lg shadow-purple-500/20 
           transition-all duration-200 hover:scale-[1.02] h-10"
       >
         {isAnalyzing ? (

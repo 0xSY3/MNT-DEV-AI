@@ -28,12 +28,12 @@ export default function Analytics() {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Analytics Dashboard</h1>
+        <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">Analytics Dashboard</h1>
         <Select value={timeRange} onValueChange={setTimeRange}>
-          <SelectTrigger className="w-[180px] border-green-500/30 bg-black/40 text-white">
+          <SelectTrigger className="w-[180px] border-purple-500/30 bg-black/40 text-white">
             <SelectValue placeholder="Select time range" />
           </SelectTrigger>
-          <SelectContent className="bg-black/90 border-green-500/30 text-white">
+          <SelectContent className="bg-black/90 border-purple-500/30 text-white">
             <SelectItem value="24h">Last 24 hours</SelectItem>
             <SelectItem value="7d">Last 7 days</SelectItem>
             <SelectItem value="30d">Last 30 days</SelectItem>
@@ -42,7 +42,7 @@ export default function Analytics() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="bg-black/40 border-green-500/20 backdrop-blur-sm">
+        <Card className="bg-black/40 border-purple-500/20 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-white">Gas Usage</CardTitle>
           </CardHeader>
@@ -57,7 +57,7 @@ export default function Analytics() {
           </CardContent>
         </Card>
 
-        <Card className="bg-black/40 border-green-500/20 backdrop-blur-sm">
+        <Card className="bg-black/40 border-purple-500/20 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-white">Transaction Volume</CardTitle>
           </CardHeader>
@@ -73,23 +73,23 @@ export default function Analytics() {
         </Card>
       </div>
 
-      <Card className="bg-black/40 border-green-500/20 backdrop-blur-sm">
+      <Card className="bg-black/40 border-purple-500/20 backdrop-blur-sm">
         <CardHeader>
           <CardTitle className="text-white">Network Statistics</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="space-y-2 p-4 rounded-lg bg-green-900/10 border border-green-500/20">
+            <div className="space-y-2 p-4 rounded-lg bg-purple-900/10 border border-purple-500/20">
               <h3 className="text-lg font-medium text-white/80">Average Block Time</h3>
-              <p className="text-3xl font-bold text-green-400">2.1s</p>
+              <p className="text-3xl font-bold text-purple-400">2.1s</p>
             </div>
-            <div className="space-y-2 p-4 rounded-lg bg-green-900/10 border border-green-500/20">
+            <div className="space-y-2 p-4 rounded-lg bg-purple-900/10 border border-purple-500/20">
               <h3 className="text-lg font-medium text-white/80">Total Validators</h3>
-              <p className="text-3xl font-bold text-green-400">1,234</p>
+              <p className="text-3xl font-bold text-purple-400">1,234</p>
             </div>
-            <div className="space-y-2 p-4 rounded-lg bg-green-900/10 border border-green-500/20">
+            <div className="space-y-2 p-4 rounded-lg bg-purple-900/10 border border-purple-500/20">
               <h3 className="text-lg font-medium text-white/80">Network TPS</h3>
-              <p className="text-3xl font-bold text-green-400">2,500</p>
+              <p className="text-3xl font-bold text-purple-400">2,500</p>
             </div>
           </div>
         </CardContent>

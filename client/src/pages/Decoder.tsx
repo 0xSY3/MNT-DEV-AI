@@ -153,12 +153,12 @@ export default function Decoder() {
       <main className="relative z-10 pt-24 pb-20 space-y-6 max-w-6xl mx-auto px-6">
         <div className="text-center space-y-2">
           <div className="inline-block px-4 py-1.5 mb-4 rounded-full text-sm font-medium 
-            bg-green-500/10 border border-green-500/20 animate-in fade-in slide-in-from-bottom-3">
-            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+            bg-purple-500/10 border border-purple-500/20 animate-in fade-in slide-in-from-bottom-3">
+            <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
               AI-Powered Analysis 🔍
             </span>
           </div>
-          <h1 className="text-5xl font-black tracking-tight bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-black tracking-tight bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
             Transaction Decoder
           </h1>
           <p className="text-xl text-white/60 max-w-[600px] mx-auto">
@@ -166,7 +166,7 @@ export default function Decoder() {
           </p>
         </div>
 
-        <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+        <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-white">Contract Analysis</CardTitle>
             <CardDescription className="text-white/60">
@@ -181,14 +181,14 @@ export default function Decoder() {
                   placeholder="Enter contract address..."
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
-                  className="pl-8 bg-green-500/10 border-green-500/20 text-white placeholder:text-white/40"
+                  className="pl-8 bg-purple-500/10 border-purple-500/20 text-white placeholder:text-white/40"
                 />
               </div>
               <Button
                 onClick={handleDecode}
                 disabled={decodeMutation.isPending || !address}
-                className="bg-green-600/90 text-white hover:bg-green-500 border border-green-500/30 
-                  shadow-lg shadow-green-500/20 transition-all duration-300"
+                className="bg-purple-600/90 text-white hover:bg-purple-500 border border-purple-500/30 
+                  shadow-lg shadow-purple-500/20 transition-all duration-300"
               >
                 {decodeMutation.isPending ? (
                   <>
@@ -203,7 +203,7 @@ export default function Decoder() {
 
             {result && (
               <div className="space-y-4 mt-6">
-                <div className="bg-green-500/5 rounded-lg p-4 space-y-2 border border-green-500/10">
+                <div className="bg-purple-500/5 rounded-lg p-4 space-y-2 border border-purple-500/10">
                   <h3 className="font-medium text-white">Contract Analysis</h3>
                   <div className="space-y-4">
                     <div>
@@ -224,7 +224,7 @@ export default function Decoder() {
                 </div>
 
                 {result.features?.length > 0 && (
-                  <div className="bg-green-500/5 rounded-lg p-4 space-y-2 border border-green-500/10">
+                  <div className="bg-purple-500/5 rounded-lg p-4 space-y-2 border border-purple-500/10">
                     <h3 className="font-medium text-white">Key Features</h3>
                     <ul className="list-disc list-inside space-y-2">
                       {result.features.map((feature, index) => (
@@ -237,7 +237,7 @@ export default function Decoder() {
                 )}
 
                 {result.functions?.length > 0 && (
-                  <div className="bg-green-500/5 rounded-lg p-4 space-y-2 border border-green-500/10">
+                  <div className="bg-purple-500/5 rounded-lg p-4 space-y-2 border border-purple-500/10">
                     <h3 className="font-medium text-white">Contract Functions</h3>
                     <ul className="list-disc list-inside space-y-2">
                       {result.functions.map((func, index) => (
@@ -254,7 +254,7 @@ export default function Decoder() {
                     <h3 className="font-medium text-white">Contract Code</h3>
                     <CodeViewer
                       code={result.contractCode}
-                      className="max-h-[400px] bg-green-500/5 border-green-500/20"
+                      className="max-h-[400px] bg-purple-500/5 border-purple-500/20"
                     />
                   </div>
                 )}

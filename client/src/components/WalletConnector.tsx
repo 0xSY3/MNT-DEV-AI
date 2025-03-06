@@ -58,9 +58,9 @@ export function WalletConnector() {
   return (
     <Button
       onClick={account ? undefined : connectWallet}
-      className="px-6 py-2 bg-green-600/90 text-white font-semibold rounded-xl 
-        shadow-lg shadow-green-500/20 hover:bg-green-500 transition-all duration-300 
-        border border-green-500/30"
+      className="px-6 py-2 bg-purple-600/90 text-white font-semibold rounded-xl 
+        shadow-lg shadow-purple-500/20 hover:bg-purple-500 transition-all duration-300 
+        border border-purple-500/30"
     >
       {account ? formatAddress(account) : "Connect Wallet"}
     </Button>

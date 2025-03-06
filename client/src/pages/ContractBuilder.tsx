@@ -195,8 +195,8 @@ export default function ContractBuilder() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center">
               <div className="inline-block px-4 py-1.5 mb-4 rounded-full text-sm font-medium 
-                bg-green-500/10 border border-green-500/20 animate-in fade-in slide-in-from-bottom-3">
-                <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                bg-purple-500/10 border border-purple-500/20 animate-in fade-in slide-in-from-bottom-3">
+                <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                   AI-Powered Smart Contracts 🚀
                 </span>
               </div>
@@ -205,7 +205,7 @@ export default function ContractBuilder() {
                 <h1 className="text-5xl sm:text-6xl font-black tracking-tight leading-tight">
                   Smart Contract
                   <br />
-                  <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                     Builder
                   </span>
                 </h1>
@@ -217,7 +217,7 @@ export default function ContractBuilder() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <div className="space-y-6">
-                <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+                <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
                   <CardHeader className="space-y-2 p-4 sm:p-6">
                     <CardTitle className="text-xl sm:text-2xl text-white">Contract Requirements</CardTitle>
                     <CardDescription className="text-sm sm:text-base text-white/60">
@@ -231,8 +231,8 @@ export default function ContractBuilder() {
                         placeholder="Enter your contract requirements..."
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        className="min-h-[120px] sm:min-h-[150px] bg-green-500/10 border-green-500/20 
-                          text-white placeholder:text-white/40 resize-none focus:border-green-500/40 
+                        className="min-h-[120px] sm:min-h-[150px] bg-purple-500/10 border-purple-500/20 
+                          text-white placeholder:text-white/40 resize-none focus:border-purple-500/40 
                           transition-colors"
                       />
                     </div>
@@ -248,33 +248,33 @@ export default function ContractBuilder() {
                           value={newFeature}
                           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewFeature(e.target.value)}
                           onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && addFeature()}
-                          className="flex-1 bg-green-500/10 border-green-500/20 text-white 
-                            placeholder:text-white/40 focus:border-green-500/40 transition-colors"
+                          className="flex-1 bg-purple-500/10 border-purple-500/20 text-white 
+                            placeholder:text-white/40 focus:border-purple-500/40 transition-colors"
                         />
                         <Button
                           onClick={addFeature}
                           disabled={!newFeature.trim()}
-                          className="sm:w-auto w-full bg-green-600/90 text-white hover:bg-green-500 
-                            border border-green-500/30 shadow-lg shadow-green-500/20 transition-all 
+                          className="sm:w-auto w-full bg-purple-600/90 text-white hover:bg-purple-500 
+                            border border-purple-500/30 shadow-lg shadow-purple-500/20 transition-all 
                             duration-200 hover:scale-[1.02]"
                         >
                           Add Feature
                         </Button>
                       </div>
                       <div className="flex flex-wrap gap-2 max-h-[150px] overflow-y-auto 
-                        scrollbar-thin scrollbar-thumb-green-500/20 scrollbar-track-transparent 
+                        scrollbar-thin scrollbar-thumb-purple-500/20 scrollbar-track-transparent 
                         pr-2">
                         {features.map((feature, index) => (
                           <Badge
                             key={index}
                             variant="outline"
-                            className="bg-green-500/10 text-white border-green-500/20 px-3 py-1.5 
+                            className="bg-purple-500/10 text-white border-purple-500/20 px-3 py-1.5 
                               flex items-center space-x-2 text-sm"
                           >
                             <span>{feature}</span>
                             <button
                               onClick={() => removeFeature(index)}
-                              className="hover:text-green-300 transition-colors ml-2"
+                              className="hover:text-purple-300 transition-colors ml-2"
                               aria-label="Remove feature"
                             >
                               ×
@@ -287,8 +287,8 @@ export default function ContractBuilder() {
                     <Button
                       onClick={() => generateContract.mutate()}
                       disabled={!description || generateContract.isPending}
-                      className="w-full bg-green-600/90 text-white hover:bg-green-500 
-                        border border-green-500/30 shadow-lg shadow-green-500/20 
+                      className="w-full bg-purple-600/90 text-white hover:bg-purple-500 
+                        border border-purple-500/30 shadow-lg shadow-purple-500/20 
                         transition-all duration-200 hover:scale-[1.02] h-12"
                     >
                       <Code2 className="mr-2 h-5 w-5" />
@@ -297,18 +297,18 @@ export default function ContractBuilder() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+                <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white">Analysis Tools</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <Tabs defaultValue="security" className="space-y-4">
-                      <TabsList className="bg-green-500/10 border border-green-500/20">
-                        <TabsTrigger value="security" className="data-[state=active]:bg-green-500">
+                      <TabsList className="bg-purple-500/10 border border-purple-500/20">
+                        <TabsTrigger value="security" className="data-[state=active]:bg-purple-500">
                           <ShieldCheck className="mr-2 h-4 w-4" />
                           Security
                         </TabsTrigger>
-                        <TabsTrigger value="tests" className="data-[state=active]:bg-green-500">
+                        <TabsTrigger value="tests" className="data-[state=active]:bg-purple-500">
                           <TestTubes className="mr-2 h-4 w-4" />
                           Tests
                         </TabsTrigger>
@@ -325,13 +325,13 @@ export default function ContractBuilder() {
               </div>
 
               <div className="space-y-6">
-                <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+                <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white">Contract Development</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
-                      <div className="relative rounded-lg border border-green-500/20 bg-black/40 backdrop-blur-sm">
+                      <div className="relative rounded-lg border border-purple-500/20 bg-black/40 backdrop-blur-sm">
                         <CodeViewer
                           code={code}
                           className="h-[calc(100vh-400px)] min-h-[400px]"
@@ -339,10 +339,10 @@ export default function ContractBuilder() {
                         />
                       </div>
                       {gasEstimate && (
-                        <div className="p-4 rounded-lg border border-green-500/20 bg-green-900/10">
+                        <div className="p-4 rounded-lg border border-purple-500/20 bg-purple-900/10">
                           <div className="flex items-center mb-2">
-                            <Timer className="mr-2 h-4 w-4 text-green-400" />
-                            <h4 className="text-sm font-medium text-green-400">Estimated Gas</h4>
+                            <Timer className="mr-2 h-4 w-4 text-purple-400" />
+                            <h4 className="text-sm font-medium text-purple-400">Estimated Gas</h4>
                           </div>
                           <div className="grid grid-cols-2 gap-4 text-sm">
                             <div>
@@ -360,7 +360,7 @@ export default function ContractBuilder() {
                         <Button
                           onClick={() => compileMutation.mutate()}
                           disabled={!code || compileMutation.isPending}
-                          className="bg-green-600/90 text-white hover:bg-green-500 border border-green-500/30"
+                          className="bg-purple-600/90 text-white hover:bg-purple-500 border border-purple-500/30"
                         >
                           {compileMutation.isPending ? "Compiling..." : "Compile Contract"}
                         </Button>
@@ -456,7 +456,7 @@ export default function ContractBuilder() {
                               }
                             }}
                             disabled={isDeploying}
-                            className="bg-green-600/90 text-white hover:bg-green-500 border border-green-500/30"
+                            className="bg-purple-600/90 text-white hover:bg-purple-500 border border-purple-500/30"
                           >
                             {isDeploying ? (
                               <>
@@ -481,7 +481,7 @@ export default function ContractBuilder() {
                   </CardContent>
                 </Card>
                 
-                <Card className="border-green-500/20 bg-green-900/10 backdrop-blur-sm">
+                <Card className="border-purple-500/20 bg-purple-900/10 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white">Contract Metrics</CardTitle>
                   </CardHeader>

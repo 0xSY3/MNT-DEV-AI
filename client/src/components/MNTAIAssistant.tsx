@@ -94,13 +94,13 @@ export default function MNTAIAssistant() {
   };
 
   return (
-    <Card className="h-[600px] flex flex-col bg-green-900/10 border-green-500/20 backdrop-blur-sm mt-20">
+    <Card className="h-[600px] flex flex-col bg-purple-900/10 border-purple-500/20 backdrop-blur-sm mt-20">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <div className="p-2 rounded-xl bg-gradient-to-r from-green-400/20 to-green-600/20">
-            <Brain className="h-5 w-5 text-green-400" />
+          <div className="p-2 rounded-xl bg-gradient-to-r from-purple-400/20 to-purple-600/20">
+            <Brain className="h-5 w-5 text-purple-400" />
           </div>
-          <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
             MNT AI Assistant
           </span>
         </CardTitle>
@@ -118,8 +118,8 @@ export default function MNTAIAssistant() {
                 <div
                   className={`flex items-start space-x-2 max-w-[80%] ${
                     message.role === 'assistant' 
-                      ? 'bg-green-500/10 text-white'
-                      : 'bg-green-600 text-white'
+                      ? 'bg-purple-500/10 text-white'
+                      : 'bg-purple-600 text-white'
                   } rounded-lg p-3`}
                 >
                   {message.role === 'assistant' ? (
@@ -137,7 +137,7 @@ export default function MNTAIAssistant() {
             ))}
             {typing.isTyping && (
               <div className="flex justify-start">
-                <div className="flex items-start space-x-2 max-w-[80%] bg-green-500/10 text-white rounded-lg p-3">
+                <div className="flex items-start space-x-2 max-w-[80%] bg-purple-500/10 text-white rounded-lg p-3">
                   <Bot className="h-5 w-5 mt-1 flex-shrink-0" />
                   <div className="prose prose-invert max-w-none">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -154,12 +154,12 @@ export default function MNTAIAssistant() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about Mantle Network..."
-            className="flex-1 bg-green-500/10 border-green-500/20 text-white placeholder:text-white/40"
+            className="flex-1 bg-purple-500/10 border-purple-500/20 text-white placeholder:text-white/40"
           />
           <Button 
             type="submit" 
             disabled={!input.trim() || isLoading}
-            className="bg-green-600 hover:bg-green-500"
+            className="bg-purple-600 hover:bg-purple-500"
           >
             <Send className="h-4 w-4" />
           </Button>
