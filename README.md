@@ -2,7 +2,7 @@
 
 An AI-powered development platform for building, analyzing, and optimizing smart contracts on the Mantle Network Layer 2 solution. This project leverages CrewAI and Langchain to provide advanced AI capabilities for smart contract development.
 
-![Mantle Network Development Platform](generated-icon.png)
+![Mantle Network Development Platform](generated-icon (1).png)
 
 ## Features
 
