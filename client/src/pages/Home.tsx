@@ -174,7 +174,7 @@ export default function Home() {
                 
                 <div className="flex items-center gap-8">
                   <div className="flex flex-col">
-                    <span className="text-3xl font-bold text-purple-400">10K+</span>
+                    <span className="text-3xl font-bold text-purple-400">100+</span>
                     <span className="text-gray-400 text-sm">Contracts Created</span>
                   </div>
                   <div className="h-8 w-px bg-purple-500/30"></div>

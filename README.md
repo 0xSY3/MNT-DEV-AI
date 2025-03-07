@@ -1,13 +1,13 @@
 # AgenticMinds -  A Mantle Network Development Platform
 
-An AI-powered development platform for building, analyzing, and optimizing smart contracts on the Mantle Network Layer 2 solution.
+An AI-powered development platform for building, analyzing, and optimizing smart contracts on the Mantle Network Layer 2 solution. This project leverages CrewAI and Langchain to provide advanced AI capabilities for smart contract development.
 
 ![Mantle Network Development Platform](generated-icon.png)
 
 ## Features
 
 ### 🏗️ Contract Builder
-- AI-powered smart contract development
+- AI-powered smart contract development using Langchain
 - Visual tools for contract creation
 - Real-time syntax validation
 - Best practices suggestions
@@ -23,7 +23,7 @@ An AI-powered development platform for building, analyzing, and optimizing smart
 - Customizable contract templates
 
 ### 🤖 Mantle AI Assistant
-- AI-powered development assistance
+- AI-powered development assistance using CrewAI and Langchain
 - Real-time code suggestions
 - Smart contract optimization tips
 - Mantle Network-specific guidance
@@ -35,7 +35,7 @@ An AI-powered development platform for building, analyzing, and optimizing smart
 - Mantle L2-specific optimizations
 
 ### 🧪 Test Suite Generator
-- AI-powered test case generation
+- AI-powered test case generation using Langchain
 - Comprehensive test coverage
 - Automated test execution
 - Custom test scenario creation
@@ -44,7 +44,7 @@ An AI-powered development platform for building, analyzing, and optimizing smart
 
 - Frontend: React + TypeScript + Vite
 - Backend: Express + Node.js (using SQLite)
-- AI Integration: OpenAI
+- AI Integration: OpenAI, CrewAI, Langchain
 - UI Components: Radix UI + Tailwind CSS
 - Smart Contract Testing: Hardhat
 - Data Visualization: D3.js + Recharts

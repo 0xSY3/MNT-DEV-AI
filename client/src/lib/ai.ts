@@ -1,3 +1,7 @@
+// Import CrewAI and Langchain
+// import { Crew } from "crewai";
+// import { OpenAI } from "langchain";
+
 interface AnalysisResult {
   suggestions: Array<{
     type: "warning" | "error" | "info";
@@ -31,6 +35,9 @@ interface AnalysisResult {
 export async function analyzeCode(params: { code: string }): Promise<AnalysisResult> {
   const response = await fetch("/api/ai/analyze", {
     method: "POST",
+    // Use Langchain to analyze the code
+    // const model = new OpenAI();
+    // const analysis = await model.call(params.code);
     headers: {
       "Content-Type": "application/json",
     },
@@ -44,12 +51,18 @@ export async function analyzeCode(params: { code: string }): Promise<AnalysisRes
   return response.json();
 }
 
+// Use CrewAI to generate the contract
+// const crew = new Crew({ agents: [], tasks: [] });
+// const code = await crew.kickoff();
 export async function generateContract(params: {
   description: string;
   features: string[];
 }): Promise<{ code: string; explanation: string }> {
   const response = await fetch("/api/ai/generate", {
     method: "POST",
+    // Use Langchain to analyze the code
+    // const model = new OpenAI();
+    // const analysis = await model.call(params.code);
     headers: {
       "Content-Type": "application/json",
     },
@@ -60,6 +73,9 @@ export async function generateContract(params: {
     throw new Error("Failed to generate contract");
   }
 
+// Use Langchain to optimize the code
+// const model = new OpenAI();
+// const optimizedCode = await model.call(params.code);
   return response.json();
 }
 
@@ -70,6 +86,9 @@ export async function optimizeCode(params: { code: string }): Promise<{
 }> {
   const response = await fetch("/api/ai/optimize", {
     method: "POST",
+    // Use Langchain to analyze the code
+    // const model = new OpenAI();
+    // const analysis = await model.call(params.code);
     headers: {
       "Content-Type": "application/json",
     },

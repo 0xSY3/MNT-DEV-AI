@@ -64,6 +64,9 @@ async function decodeContract(address: string): Promise<DecoderResponse> {
         throw new Error("Invalid response format from decoder service");
       }
 
+// Use Langchain to summarize the contract
+// const model = new OpenAI();
+// const summary = await model.call(data.contractCode);
       return {
         contractCode: data.contractCode || '',
         summary: data.summary || 'No summary available',

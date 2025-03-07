@@ -285,7 +285,9 @@ export default function ContractBuilder() {
                     </div>
 
                     <Button
-                      onClick={() => generateContract.mutate()}
+                      // Use CrewAI to manage contract generation
+    // const contractCrew = new Crew({ ... });
+    onClick={() => generateContract.mutate()}
                       disabled={!description || generateContract.isPending}
                       className="w-full bg-purple-600/90 text-white hover:bg-purple-500 
                         border border-purple-500/30 shadow-lg shadow-purple-500/20 

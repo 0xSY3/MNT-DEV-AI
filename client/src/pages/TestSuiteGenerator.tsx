@@ -65,7 +65,9 @@ export default function TestSuiteGenerator() {
         throw new Error("Failed to generate tests");
       }
 
-      const generatedTests = await response.json();
+      // Use Langchain to generate the test suite
+    // const testSuite = await model.call(contractCode);
+    const generatedTests = await response.json();
       setTests(generatedTests);
 
       toast({
